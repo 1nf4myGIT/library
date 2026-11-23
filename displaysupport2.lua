@@ -1,0 +1,25 @@
+task.wait(1)
+
+local function click(x, y)
+
+	local VirtualInputManager = game:FindService("VirtualInputManager")
+
+	if not VirtualInputManager then
+		return
+	end
+
+	VirtualInputManager:SendMouseButtonEvent(x,y,0,true,game,0)
+	task.wait(0.05)
+	VirtualInputManager:SendMouseButtonEvent(x,y,0,false,game,0)
+end
+
+
+--  (WANTED AUTOFARM EXIT MENU CLICKS FOR DIFFERENT SCREEN SIZES)
+-- click(100,100) // click(X,Y)
+click(133,1213)
+click(147,1310)
+click(138,1476)
+click(213,1001)
+click(102,2481)
+click(142,1014)
+click(150,1136)
